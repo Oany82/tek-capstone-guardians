@@ -10,8 +10,8 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 (
         tags = "@regressionTest",
         features = ("classpath:features"),
-        glue="tek.sdet.framework",
-        dryRun=false,
+        glue = "tek.sdet.framework",
+        dryRun = false,
         plugin = {
                 "pretty",
                 "html:target/htmlReports/cucumber-pretty.html",

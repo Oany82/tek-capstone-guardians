@@ -15,7 +15,7 @@ public class RetailSteps extends CommonUtility {
 
 	POMFactory pomFactory = new POMFactory();
 
-	@When("User click an All section")
+	@When("User click on All section")
 	public void userClickOnAllSection() {
 		click(pomFactory.homePage().allOptions);
 		logger.info("All Options dropdowns was clicked");
@@ -43,7 +43,7 @@ public class RetailSteps extends CommonUtility {
 
 	}
 
-	@Then("Below options are present in department")
+	@Then("below options are present in department")
 	public void belowOptionsArePresentInDepartment(DataTable dataTable) {
 		List<List<String>> departamentOptions = dataTable.asLists(String.class);
 		List<WebElement> dept = pomFactory.homePage().sideBar;

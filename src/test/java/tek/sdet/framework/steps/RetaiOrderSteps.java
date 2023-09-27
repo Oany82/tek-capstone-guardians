@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tek.sdet.framework.pages.POMFactory;
@@ -15,12 +14,6 @@ public class RetaiOrderSteps extends CommonUtility {
 	POMFactory pomFactory = new POMFactory();
 
 	// Add Items to the Cart
-
-	@Given("User is on retail website")
-	public void userIsOnRetailWebsite() {
-		Assert.assertTrue(pomFactory.homePage().tekschoolLogo.isDisplayed());
-		logger.info("TEKSCHOOL logo is displayed");
-	}
 
 	@When("User click on Sign in option")
 	public void userClickOnSignInOption() {
@@ -103,6 +96,7 @@ public class RetaiOrderSteps extends CommonUtility {
 		logger.info("User clicked on place your order successfully");
 
 	}
+
 	@Then("User click on Delete button")
 	public void userClickOnDeleteButton() {
 		click(pomFactory.retailOrderPage().deleteCart);
@@ -175,7 +169,7 @@ public class RetaiOrderSteps extends CommonUtility {
 		click(pomFactory.retailOrderPage().reviewBttn);
 		logger.info("User clicked on review button");
 	}
-	
+
 	@When("User write review headline {string} and written text {string}")
 	public void userWriteReviewHeadlineAndWrittenText(String headlineText, String writtenText) {
 		sendText(pomFactory.retailOrderPage().headlineText, headlineText);
